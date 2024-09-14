@@ -18,24 +18,25 @@ Currently, the keylog file is saved as keylog.txt in the specified directory. A 
 Installation
 Clone the repository:
 
-bash
+```bash
 Copy code
 git clone https://github.com/yourusername/keylogger.git
 Install dependencies:
+```
 
-bash
+```bash
 Copy code
 pip install pynput
-
+```
 Update the log_dir variable in the script to specify where the log file should be saved.
 
 ## Usage
 Run the keylogger:
 
-bash
+```bash
 Copy code
 python keylogger.py
-
+```
 The script will begin listening for keyboard input and log it to keylog.txt in the directory specified by log_dir.
 
 The logged file will include:
@@ -55,10 +56,11 @@ The logger handles the backspace key by removing the last character from the log
 ## Example
 Here’s an example of the log output:
 
-bash
+```bash
 2024-09-12 14:45:23
 [shift] Hello [shift] World
 [shift] This is a test message
+```
 
 ## Future Enhancements
 Dynamic Filename Creation:
