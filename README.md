@@ -19,7 +19,7 @@ Currently, the keylog file is saved as keylog.txt in the specified directory. A 
 ## Installation
 ### Clone the repository:
 ```bash
-git clone https://github.com/yourusername/keylogger.git
+git clone https://github.com/leasure314/keyloggerproject.git
 ```
 ### Install dependencies:
 ```bash
@@ -30,7 +30,7 @@ Update the log_dir variable in the script to specify where the log file should b
 ## Usage
 ### Run the keylogger:
 ```bash
-python keylogger.py
+python keyloggerproject.py
 ```
 The script will begin listening for keyboard input and log it to keylog.txt in the directory specified by log_dir.
 
