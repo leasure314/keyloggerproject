@@ -15,62 +15,55 @@ The logger records the date and time it starts running, helping to track when th
 Future Enhancements
 Dynamic File Saving:
 Currently, the keylog file is saved as keylog.txt in the specified directory. A planned enhancement will allow the keylogger to create unique filenames (with timestamps or counters) for each session to avoid overwriting old logs.
-Installation
-Clone the repository:
 
+## Installation
+### Clone the repository:
 ```bash
-Copy code
 git clone https://github.com/yourusername/keylogger.git
-Install dependencies:
 ```
-
+### Install dependencies:
 ```bash
-Copy code
 pip install pynput
 ```
 Update the log_dir variable in the script to specify where the log file should be saved.
 
 ## Usage
-Run the keylogger:
-
+### Run the keylogger:
 ```bash
-Copy code
 python keylogger.py
 ```
 The script will begin listening for keyboard input and log it to keylog.txt in the directory specified by log_dir.
 
-The logged file will include:
-
-Alphanumeric keys.
-Special keys like space, enter, and shift.
-Removal of characters when backspace is pressed.
+### The logged file will include:
+- Alphanumeric keys.
+- Special keys like space, enter, and shift.
+- Removal of characters when backspace is pressed.
 
 ## How It Works
-Logging Alphanumeric and Special Keys:
-### Alphanumeric keys: Captured via key.char and written directly to the log file.
-### Special keys: Handled separately, logging them by name (e.g., [space], [enter]).
-### Shift Key:
-The shift key is tracked using a shift_pressed flag to ensure it's logged only once, even if held down for a long period.
-### Backspace Key:
-The logger handles the backspace key by removing the last character from the log file, making it behave like an actual backspace and cleaning up the logged content.
+### Logging Alphanumeric and Special Keys:
+### 1. Alphanumeric keys: 
+- Captured via key.char and written directly to the log file.
+### 2. Special keys: 
+Handled separately, logging them by name (e.g., [space], [enter]).
+#### - Shift Key:
+- The shift key is tracked using a shift_pressed flag to ensure it's logged only once, even if held down for a long period.
+#### - Backspace Key:
+- The logger handles the backspace key by removing the last character from the log file, making it behave like an actual backspace and cleaning up the logged content.
 ## Example
 Here’s an example of the log output:
-
-```bash
+```plaintext
 2024-09-12 14:45:23
 [shift] Hello [shift] World
 [shift] This is a test message
 ```
-
 ## Future Enhancements
-Dynamic Filename Creation:
-Implement functionality to generate unique log filenames to prevent overwriting previous logs automatically.
+### Dynamic Filename Creation:
+- Implement functionality to generate unique log filenames to prevent overwriting previous logs automatically.
+### Additional Key Exceptions:
+- Add special key handling if necessary for other modifier keys (e.g., ctrl, alt, capslock, etc.).
 
-Additional Key Exceptions:
-Add more special key handling for other modifier keys (e.g., ctrl, alt, capslock, etc.).
-
-Contributing
+## Contributing:
 Contributions are welcome! Feel free to submit a pull request or open an issue to discuss further improvements or bug fixes.
 
-License
+## License:
 This project is licensed under the MIT License.
